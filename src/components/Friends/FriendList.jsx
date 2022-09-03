@@ -1,4 +1,5 @@
-import styles from './FriendList.module.css'
+import PropTypes from 'prop-types';
+import styles from './FriendList.module.css';
 
 export function FriendsListItem({ avatar, name, isOnline }) {
   return (
@@ -8,15 +9,22 @@ export function FriendsListItem({ avatar, name, isOnline }) {
         className={styles.avatar}
         src={avatar}
         alt="User avatar"
+        width="100"
       />
       <p className={styles.name}>{name}</p>
     </li>
   );
-}
+};
+
+FriendsListItem.propTypes = {
+  avatar: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  isOnline: PropTypes.string.isRequired,
+};
 
 export function FriendList({ friends }) {
     return (
-<ul className={StyleSheet.friendList}>
+<ul className={styles.friendList}>
 {friends.map(({ avatar, name, isOnline, id }) => (
         <FriendsListItem
           key={id}
@@ -27,4 +35,12 @@ export function FriendList({ friends }) {
       ))}
 </ul>
     )
-}
+};
+
+FriendList.propTypes = {
+  friends: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+    })
+  )
+};
