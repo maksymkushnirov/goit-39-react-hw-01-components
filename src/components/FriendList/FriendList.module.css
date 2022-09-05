@@ -14,30 +14,23 @@
   padding: 0 0 10px 20%;
 }
 
-.item:last-child {
-  padding: 0 0 0 20%;
-}
-
 .online {
   width: 20px;
   height: 20px;
   border-radius: 50%;
   background-color: green;
   margin-right: 20px;
-  filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 15px #fff);
 }
 
 .offline {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: red;
+  background-color: rgb(255, 0, 0);
   margin-right: 20px;
-  filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 15px #fff);
 }
 
 .name {
   font-weight: 500;
   margin-left: 20px;
-  filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 15px #fff);
 }

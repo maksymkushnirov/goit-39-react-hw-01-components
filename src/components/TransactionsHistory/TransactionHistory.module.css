@@ -4,9 +4,11 @@
   padding: 20px 0;
   border-radius: 15px;
 }
+
 .transactionHistory {
   margin: auto;
 }
+
 .transactionHistory th {
   padding: 15px;
   background-color: #00bcd5;

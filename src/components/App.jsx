@@ -1,15 +1,17 @@
-import { Profile } from "./SocialProfile/Profile";
-import user from './Data/user.json'
-import { Statistics } from "./Statistics/Statistics";
-import data from './Data/data.json'
-import { FriendList } from "./Friends/FriendList";
-import friends from './Data/friends.json'
-import { TransactionHistory } from "./Transactions/TransactionHistory";
-import transactions from './Data/transactions.json'
+
+import Profile from 'components/Profile';
+import Statistics from 'components/Statistics';
+import FriendList from 'components/FriendList';
+import TransactionHistory from 'components/TransactionsHistory';
+
+import user from 'data/user.json';
+import data from 'data/data.json';
+import friends from 'data/friends.json';
+import transactions from 'data/transactions.json';
 
 export const App = () => {
   return (
-    <div className="socialNetwork">
+    <div className="socialNetworkAccount">
       <Profile
         username={user.username}
         tag={user.tag}
@@ -19,8 +21,7 @@ export const App = () => {
       />
       <Statistics title="Upload stats" stats={data} />
       <FriendList friends={friends} />
-      <TransactionHistory items={transactions} />
+      <TransactionHistory items={transactions} />;
     </div>
-     
   );
-}
+};
